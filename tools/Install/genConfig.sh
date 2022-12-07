@@ -146,7 +146,7 @@ fi
 # Arguments are: json_key
 read_config_json()
 {
-python << EOF
+python3 << EOF
 import json
 value = ""
 with open("${CONFIG_JSON_FILE}", "r") as f:
@@ -233,7 +233,7 @@ SDK_PKCS11_USER_PIN="$PKCS11_USER_PIN"
 set +a
 
 # Use python template substitute to generate $OUTPUT_CONFIG_FILE
-python << EOF
+python3 << EOF
 import os
 from string import Template
 with open("${INPUT_CONFIG_FILE}", "r") as f, open("${OUTPUT_CONFIG_FILE}", "w") as o:
