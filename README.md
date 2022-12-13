@@ -42,4 +42,4 @@ When building Alexa with the SDK, you should also adhere to the [following secur
 
 ### Maika voice service
 - Olli has modified this source code to change DEFAULT_AVS_GATEWAY, DEFAULT_LWA_BASE_URL, MIME_BOUNDARY, AVS_EVENT_URL_PATH_EXTENSION, AVS_DOWNCHANNEL_URL_PATH_EXTENSION, REQUEST_TOKEN_PATH, REFRESH_TOKEN_PATH. You can get these information in this source code.
-- Remember to update `deviceSerialNumber` and `clientId` in file AlexaClientSDKConfig.json. When testing, if you use ./genConfig.sh to generate config, use alexa client id in config.json, then you can update clientId in AlexaClientSDKConfig.json later to prevent raising error.
+- Remember to update `deviceSerialNumber` and `clientId` in file AlexaClientSDKConfig.json, other values are up to you. When testing, if you use ./genConfig.sh to generate config, use alexa client id in config.json, then you can update clientId in AlexaClientSDKConfig.json later to prevent raising error.
