@@ -158,11 +158,11 @@ EOF
 }
 
 CLIENT_ID=$(read_config_json "clientId")
-if [[ ! "$CLIENT_ID" =~ amzn1\.application-oa2-client\.[0-9a-z]{32} ]]
-then
-   echo 'client ID is invalid!'
-   exit 2
-fi
+# if [[ ! "$CLIENT_ID" =~ amzn1\.application-oa2-client\.[0-9a-z]{32} ]]
+# then
+#    echo 'client ID is invalid!'
+#    exit 2
+# fi
 
 PRODUCT_ID=$(read_config_json "productId")
 if [[ ! "$PRODUCT_ID" =~ [0-9a-zA-Z_]+ ]]
