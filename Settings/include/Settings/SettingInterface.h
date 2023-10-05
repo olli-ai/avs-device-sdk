@@ -155,7 +155,7 @@ ValueT SettingInterface<ValueT>::getDefault() const {
 template <typename ValueT>
 bool SettingInterface<ValueT>::addObserver(std::shared_ptr<ObserverType> observer) {
     if (observer) {
-        std::lock_guard<std::mutex>{m_observerMutex};
+        (void)std::lock_guard<std::mutex>{m_observerMutex};
         m_observers.insert(observer);
         return true;
     }
@@ -165,7 +165,7 @@ bool SettingInterface<ValueT>::addObserver(std::shared_ptr<ObserverType> observe
 
 template <typename ValueT>
 void SettingInterface<ValueT>::notifyObservers(SettingNotifications notification) {
-    std::lock_guard<std::mutex>{m_observerMutex};
+    (void)std::lock_guard<std::mutex>{m_observerMutex};
     for (auto& observer : m_observers) {
         ValueT value = m_value;
         observer->onSettingNotification(value, notification);
@@ -174,7 +174,7 @@ void SettingInterface<ValueT>::notifyObservers(SettingNotifications notification
 
 template <typename ValueT>
 void SettingInterface<ValueT>::removeObserver(std::shared_ptr<ObserverType>& observer) {
-    std::lock_guard<std::mutex>{m_observerMutex};
+    (void)std::lock_guard<std::mutex>{m_observerMutex};
     m_observers.erase(observer);
 }
 
