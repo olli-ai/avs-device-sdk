@@ -81,7 +81,7 @@ static const std::chrono::minutes DEFAULT_REQUEST_TIMEOUT = std::chrono::minutes
 static const std::chrono::minutes DEFAULT_ACCESS_TOKEN_REFRESH_HEAD_START = std::chrono::minutes(10);
 
 /// Default for configured base URL for @c LWA requests.
-static const std::string DEFAULT_LWA_BASE_URL = "https://staging.oauth2.iviet.com/oauth2/";
+static const std::string DEFAULT_LWA_BASE_URL = "https://oauth2.iviet.com/oauth2/";
 
 /// Path suffix for URL used in code pair requests to @C LWA.
 static const std::string REQUEST_CODE_PAIR_PATH = "create/codepair";
